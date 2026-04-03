@@ -102,7 +102,7 @@ Installing:
 Installing dependencies:
 [...]
 ````
-### clone the repos of paperless-ngx and the docling b
+### clone the repos of paperless-ngx and the paperless-ngx-docling-consume 
 ````bash
 cd
 git clone https://github.com/paperless-ngx/paperless-ngx
@@ -127,6 +127,23 @@ remote: Compressing objects: 100% (19/19), done.
 remote: Total 20 (delta 5), reused 0 (delta 0), pack-reused 0 (from 0)
 Receiving objects: 100% (20/20), 12.21 KiB | 1.53 MiB/s, done.
 Resolving deltas: 100% (5/5), done.
+````
+### prepare all the files into your "working directory", I am putting everything into the paperless-ngx directory here
+````bash
+cd
+cd paperless-ngx
+cp docker/compose/docker-compose.postgres-tika.yml .
+cp docker/compose/docker-compose.env .
+cp ../paperless-ngx-docling-consume/docling-postconsume.sh .
+````
+Expected output:
+````
+[user@DESKTOP-RR74GPE paperless-ngx]$ cd
+cd paperless-ngx
+cp docker/compose/docker-compose.postgres-tika.yml .
+cp docker/compose/docker-compose.env .
+cp ../paperless-ngx-docling-consume/docling-postconsume.sh .
+[user@DESKTOP-RR74GPE paperless-ngx]$
 ````
 
 
