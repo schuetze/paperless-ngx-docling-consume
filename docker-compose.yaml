@@ -83,7 +83,8 @@ services:
     image: docker.io/apache/tika:latest
     restart: unless-stopped
   docling:
-    image: quay.io/docling-project/docling-serve-cu128 # or cpu version
+    # image: quay.io/docling-project/docling-serve-cu128 # or cpu version
+    image: quay.io/docling-project/docling-serve-cpu # or gpu version
     container_name: docling
     environment:
       - UVICORN_WORKERS=1
