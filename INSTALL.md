@@ -102,6 +102,21 @@ Installing:
 Installing dependencies:
 [...]
 ````
+
+### install the GPU stuff for podman in preperation for docling
+````bash
+curl -s -L https://nvidia.github.io/libnvidia-container/stable/rpm/nvidia-container-toolkit.repo |  sudo tee /etc/yum.repos.d/nvidia-container-toolkit.repo 
+sudo yum install -y nvidia-container-toolkit 
+sudo nvidia-ctk cdi generate --output=/etc/cdi/nvidia.yaml
+nvidia-ctk cdi list
+ 
+podman run --rm --device nvidia.com/gpu=all nvidia/cuda:11.0.3-base-ubuntu20.04 nvidia-smi
+
+````
+Expected output:
+````
+````
+
 ### clone the repos of paperless-ngx and the paperless-ngx-docling-consume 
 ````bash
 cd
