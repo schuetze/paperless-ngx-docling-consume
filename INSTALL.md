@@ -82,33 +82,53 @@ Connecting to vm podman-machine-default. To close connection, use `~.` or `exit`
 [user@DESKTOP-RR74GPE ~]$
 ````
 Yuearh, we are in, lets do this
-### install some basic stuff to work with, I guess you only really need git :)
+### install some basic stuff to work with ( I guess you only really need podman-compose and git :) )
 ````bash
-sudo dnf install tmux wget btop git -y
+sudo dnf install tmux wget btop podman-compose git -y
 ````
-Expected output:
+Expected output, basically a wall of text:
 ````
-[user@DESKTOP-RR74GPE ~]$ sudo dnf install tmux wget btop git -y
+[user@DESKTOP-RR74GPE ~]$ sudo dnf install tmux wget btop podman-compose git -y
 Updating and loading repositories:
- Fedora 43 - x86_64 - Updates                                                                                                                                                          100% |   2.9 MiB/s |  10.7 MiB |  00m04s
- Copr repo for containers-podman-28250 owned by packit                                                                                                                                 100% |   2.8 KiB/s |   7.8 KiB |  00m03s
- Fedora 43 openh264 (From Cisco) - x86_64                                                                                                                                              100% |   1.6 KiB/s |   5.8 KiB |  00m04s
- Fedora 43 - x86_64                                                                                                                                                                    100% |   6.1 MiB/s |  35.4 MiB |  00m06s
 Repositories loaded.
-Package                                                                     Arch             Version                                                                      Repository                                       Size
-Upgrading:
- ngtcp2                                                                     x86_64           1.21.0-1.fc43                                                                updates                                     318.3 KiB
-   replacing ngtcp2                                                         x86_64           1.19.0-1.fc43                                                                updates                                     314.2 KiB
- ngtcp2-crypto-gnutls                                                       x86_64           1.21.0-1.fc43                                                                updates                                      39.6 KiB
-   replacing ngtcp2-crypto-gnutls                                           x86_64           1.19.0-1.fc43                                                                updates                                      39.6 KiB
+Package "wget2-wget-2.2.1-1.fc43.x86_64" is already installed.
+
+Package                                                                                                                             Arch                       Version                                                                                                                              Repository                                                                        Size
 Installing:
- btop                                                                       x86_64           1.4.6-1.fc43                                                                 updates                                       1.7 MiB
- git                                                                        x86_64           2.53.0-1.fc43                                                                updates                                      56.4 KiB
- tmux                                                                       x86_64           3.5a-7.fc43                                                                  updates                                       1.2 MiB
- wget2-wget                                                                 x86_64           2.2.1-1.fc43                                                                 updates                                      42.0   B
+ btop                                                                                                                               x86_64                     1.4.6-1.fc43                                                                                                                         updates                                                                        1.7 MiB
+ git                                                                                                                                x86_64                     2.53.0-1.fc43                                                                                                                        updates                                                                       56.4 KiB
+ podman-compose                                                                                                                     noarch                     1.5.0-4.fc43                                                                                                                         fedora                                                                       667.4 KiB
+ tmux                                                                                                                               x86_64                     3.5a-7.fc43                                                                                                                          updates                                                                        1.2 MiB
 Installing dependencies:
 [...]
 ````
+### clone the repos of paperless-ngx and the docling b
+````bash
+cd
+git clone https://github.com/paperless-ngx/paperless-ngx
+git clone https://github.com/BoxcarFields/paperless-ngx-docling-consume.git
+````
+Expected output:
+````
+[user@DESKTOP-RR74GPE ~]$ cd
+git clone https://github.com/paperless-ngx/paperless-ngx
+git clone https://github.com/BoxcarFields/paperless-ngx-docling-consume.git
+Cloning into 'paperless-ngx'...
+remote: Enumerating objects: 95674, done.
+remote: Counting objects: 100% (1156/1156), done.
+remote: Compressing objects: 100% (455/455), done.
+remote: Total 95674 (delta 952), reused 710 (delta 701), pack-reused 94518 (from 4)
+Receiving objects: 100% (95674/95674), 182.21 MiB | 17.14 MiB/s, done.
+Resolving deltas: 100% (72266/72266), done.
+Cloning into 'paperless-ngx-docling-consume'...
+remote: Enumerating objects: 20, done.
+remote: Counting objects: 100% (20/20), done.
+remote: Compressing objects: 100% (19/19), done.
+remote: Total 20 (delta 5), reused 0 (delta 0), pack-reused 0 (from 0)
+Receiving objects: 100% (20/20), 12.21 KiB | 1.53 MiB/s, done.
+Resolving deltas: 100% (5/5), done.
+````
+
 
 
 
