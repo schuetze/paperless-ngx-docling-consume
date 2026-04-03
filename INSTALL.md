@@ -150,22 +150,11 @@ chmod +x docling-postconsume.sh
 
 ### edit the files 
 ````bash
-cd
-cd paperless-ngx
-cp docker/compose/docker-compose.postgres-tika.yml .
-cp docker/compose/docker-compose.env .
-cp ../paperless-ngx-docling-consume/docling-postconsume.sh .
-chmod +x docling-postconsume.sh
+
 ````
 Expected output:
 ````
-[user@DESKTOP-RR74GPE paperless-ngx]$ cd
-cd paperless-ngx
-cp docker/compose/docker-compose.postgres-tika.yml .
-cp docker/compose/docker-compose.env .
-cp ../paperless-ngx-docling-consume/docling-postconsume.sh .
-chmod +x docling-postconsume.sh
-[user@DESKTOP-RR74GPE paperless-ngx]$
+
 ````
 
 
