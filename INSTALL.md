@@ -187,5 +187,13 @@ top right corner, user, my profile, API Auth Token
 
 <img width="1396" height="668" alt="image" src="https://github.com/user-attachments/assets/70b6ac5f-1f01-4ef5-a318-a527d4a299b8" />
 
+### add the following line to your docker-compose.env
+````bash
+PAPERLESS_API_TOKEN=267e321f26af123415bbc01ae47f08d4702e6c67
+````
+Expected output:
+````
+Should be at the end of your file, most probably the only active line in this file
+````
 
 
