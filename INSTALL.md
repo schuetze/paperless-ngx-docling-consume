@@ -171,8 +171,21 @@ Expected output:
 ````
 
 ````
+### start the whole thing to get the API ley
+````bash
+podman compose up -d
+````
+Expected output:
+````
+well, it should start
+````
+### connect, create the admin user, log in, extract api key from gui user pane
+````bash
+http://localhost:8000/dashboard
+````
+top right corner, user, my profile, API Auth Token
 
-
+<img width="1396" height="668" alt="image" src="https://github.com/user-attachments/assets/70b6ac5f-1f01-4ef5-a318-a527d4a299b8" />
 
 
 
